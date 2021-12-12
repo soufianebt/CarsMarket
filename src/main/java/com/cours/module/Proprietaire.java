@@ -17,7 +17,7 @@ import java.util.List;
 public class Proprietaire {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private Integer id;
     @NonNull
     private String nom;
     @NonNull

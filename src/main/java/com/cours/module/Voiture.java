@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class Voiture {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private Integer id;
     @NonNull
     private String marque;
     @NonNull
