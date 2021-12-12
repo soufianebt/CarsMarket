@@ -6,6 +6,7 @@ import {Button} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faList, faSave, faPlusSquare, faUndo} from "@fortawesome/free-solid-svg-icons";
 import axios  from "axios";
+import MyToast  from "./myToast";
 
 class Voiture extends React.Component {
 
@@ -14,6 +15,7 @@ class Voiture extends React.Component {
         this.state = this.initialState ;
         this.voitureChange = this.voitureChange.bind(this);
         this.submitVoiture = this.submitVoiture.bind(this);
+
     }
     initialState ={
         marque: '',
@@ -43,8 +45,8 @@ class Voiture extends React.Component {
             (response) => {
                 if(response.data != null){
                     this.setState(this.initialState);
-                    alert("Voiture enregistree avec succes");
-                }
+                    this.setState({"show":true});
+                    setTimeout(() => this.setState({"show":false}), 3000);                }
             }
         );
     }
@@ -58,6 +60,11 @@ class Voiture extends React.Component {
 
     render() {
         return (
+            <div>
+            <div style={{"display":this.state.show ? "block" : "none"}}>
+                <MyToast children = {{show:this.state.show, message:"Voiture enregistree avec succès.", type : "success"}}/>
+            </div>
+
         <Card className={"border border-dark bg-dark text-white"}>
             <Card.Header> <FontAwesomeIcon icon={faPlusSquare}/> Ajouter  Voiture</Card.Header>
             <Card.Body>
@@ -97,7 +104,8 @@ class Voiture extends React.Component {
                     </Card.Footer>
                 </Form>
             </Card.Body>
-        </Card>);
+        </Card>
+            </div>);
     }
 }
 export default Voiture;

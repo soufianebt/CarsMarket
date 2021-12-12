@@ -29,6 +29,7 @@ class App extends React.Component {
 
                                 <Voiture />
                             </Route>
+                            <Route path="/edit/:id" exact component={Voiture}/>
                             <Route path="/list" exact >
                                 <VoitureListe/>
                             </Route>
