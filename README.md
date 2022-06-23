@@ -4,11 +4,11 @@ This is an academic project where I did learn how to use reacts to create a sing
 In the Second Part I did use SpringBOOT FrameWork To create my restAPI using JPA repository.
 
 ## **Home Page**
-![Home Page](Images\HomePage.jpg)
+![Home Page](Images/HomePage.jpg)
 
 
 ## **Create Page**
 
-![Create Page](Images\Create.jpg)
+![Create Page](Images/Create.jpg)
 ## **Update and delete page**
-![Update and delete page](Images\UpdateAndDelete.jpg)
+![Update and delete page](Images/UpdateAndDelete.jpg)
