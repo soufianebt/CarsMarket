@@ -31,5 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
+!**/.mvn
+!**/target/**
 !**/node_modules
